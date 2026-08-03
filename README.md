@@ -26,13 +26,11 @@ git clone [https://github.com/shafiswapnil/tetris.git](https://github.com/shafis
 cd tetris
 ```
 
-
 2. **Build the Docker image:**
 
 ```sh
 docker build -t my-tetris .
 ```
-
 
 3. **Run the container:**
 
@@ -53,4 +51,5 @@ docker run -d -p 8080:80 --name my-tetris-app my-tetris
 
 ## 📄 License
 
-This project is open-source and available under the standard repository license.
+This project is open-source and licensed under the [MIT License](LICENSE)
+
