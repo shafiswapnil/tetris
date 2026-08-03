@@ -28,4 +28,6 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/tetris-app:${{ github.sha }}
+          tags: |
+            ${{ secrets.DOCKER_USERNAME }}/tetris-app:${{ github.sha }}
+            ${{ secrets.DOCKER_USERNAME }}/tetris-app:latest
