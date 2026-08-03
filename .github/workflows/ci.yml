@@ -31,3 +31,10 @@ jobs:
           tags: |
             ${{ secrets.DOCKER_USERNAME }}/tetris-app:${{ github.sha }}
             ${{ secrets.DOCKER_USERNAME }}/tetris-app:latest
+
+      - name: Run Trivy vulnerability scanner
+        uses: aquasecurity/trivy-action@v0.36.0
+        with:
+          image-ref: ${{ secrets.DOCKER_USERNAME }}/tetris-app:${{ github.sha }}
+          format: 'table'
+          vuln-type: 'os,library'
